@@ -1,0 +1,157 @@
+{
+  "pr": {
+    "number": 6928,
+    "title": "docs: fix typo in CSS selector",
+    "description": null,
+    "state": "merged",
+    "merged_by": "kodiakhq",
+    "merged_at": "2025-03-17T10:54:00Z",
+    "base": "shadcn-ui:main",
+    "head": "YordanIliev2002:main",
+    "stats": {
+      "additions": 1,
+      "deletions": 1,
+      "comments": 3,
+      "commits": 1,
+      "checks": 5,
+      "files_changed": 1
+    },
+    "labels": ["automerge"],
+    "projects": [],
+    "milestone": [],
+
+    "tabs": ["Conversation", "Commits", "Checks", "Files changed"],
+    "timeline": [
+      {
+        "type": "comment",
+        "user": "YordanIliev2002",
+        "role": "Contributor",
+        "at": "2025-03-14T00:00:00Z",
+        "content": "There was a typo"
+      },
+      {
+        "type": "comment",
+        "user": "vercel",
+        "role": "bot",
+        "at": "2025-03-14T00:00:00Z",
+        "content": "@YordanIliev2002 is attempting to deploy a commit to the shadcn-pro Team on Vercel. A member of the Team first needs to authorize it."
+      },
+      {
+        "type": "commit",
+        "user": "YordanIliev2002",
+        "role": null,
+
+        "content": "docs: fix typo in CSS selector",
+        "code": "5a72857"
+      },
+      {
+        "type": "title_changed",
+        "user": "YordanIliev2002",
+        "at": "2025-03-14T00:00:00Z",
+        "from": "Fix css selector for Zinc theme in website docs: typo in CSS selector",
+        "to": "docs: fix typo in CSS selector"
+      },
+      {
+        "type": "force_push",
+        "user": "YordanIliev2002",
+        "at": "2025-03-14T00:00:00Z",
+        "from_sha": "26c1149",
+        "to_sha": "5a72857"
+      },
+      {
+        "type": "approval",
+        "user": "Jacksonmills",
+        "state": "approved",
+        "at": "2025-03-15T00:00:00Z"
+      },
+      {
+        "type": "approval",
+        "user": "matevegh",
+        "state": "approved",
+        "at": "2025-03-16T00:00:00Z"
+      },
+      {
+        "type": "approval",
+        "user": "shadcn",
+        "state": "approved",
+        "at": "2025-03-17T00:00:00Z"
+      },
+      {
+        "type": "comment",
+        "user": "shadcn",
+        "role": "Collaborator",
+        "at": "2025-03-17T00:00:00Z",
+        "content": "Thank you"
+      },
+      {
+        "type": "comment",
+        "user": "vercel",
+        "role": "bot",
+        "at": "2025-03-17T10:54:00Z",
+        "content": "The latest updates on your projects. Learn more about Vercel for Git",
+        "table_markdown": {
+          "th": ["Name", "Status", "Preview", "Updated (UTC)"],
+          "tr": {
+            "name": "ui",
+            "status": "✅ Ready (Inspect)",
+            "preview": "Visit Preview",
+            "updated_utc": "Mar 17, 2025 10:54am"
+          },
+          "tr2": {
+            "name": "ui",
+            "status": "✅ Ready (Inspect)",
+            "preview": "Visit Preview",
+            "updated_utc": "Mar 17, 2025 10:54am"
+          }
+        }
+      },
+      {
+        "type": "deployment",
+        "user": "vercel",
+        "role": "bot",
+        "at": "2025-03-17T10:54:00Z",
+        "deployed_to": "Preview - ui"
+      },
+      {
+        "type": "label",
+        "user": "shadcn",
+        "at": "2025-03-17T00:00:00Z",
+        "label": "automerge"
+      },
+      {
+        "type": "deployment",
+        "user": "vercel",
+        "role": "bot",
+        "at": "2025-03-17T10:54:00Z",
+        "deployed_to": "Preview - v4"
+      },
+      {
+        "type": "merged",
+        "user": "kodiakhq",
+        "role": "bot",
+        "code": "61e21e3",
+        "merged_to": "shadcn-ui:main",
+        "at": "2025-03-17T10:54:00Z"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "Jacksonmills",
+        "state": "approved",
+        "at": "2025-03-15T00:00:00Z"
+      },
+      {
+        "user": "matevegh",
+        "state": "approved",
+        "at": "2025-03-16T00:00:00Z"
+      },
+      {
+        "user": "shadcn",
+        "state": "approved",
+        "at": "2025-03-17T00:00:00Z"
+      }
+    ],
+    "participants": ["YordanIliev2002", "Jacksonmills", "matevegh", "shadcn"],
+    "assignees": []
+  }
+}

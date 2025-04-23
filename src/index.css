@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-body-bg: #0d1117;
+  /* --color-dark-border: var(border-gray-700); */
+  --color-primary: #ffffff;
+  --color-secondary: #f6f8fa;
+  --color-text: #1f2328;
+  --color-text-secondary: #59636e;
+  --color-dark-primary: #1f2937;
+
+  /* 2) Override them when the .dark class is present on <html> */
+}
+/* @variant dark {
+  @theme {
+    --color-primary: #1f2937;
+    --color-text: #f3f4f6;
+  }
+} */
+
+/* @theme {
+  /* light mode defaults */
+/* :root {
+    --color-primary: #3d444d;
+    --color-text: #111827;
+  } */
+
+/* when <html> has class="dark"… */
+/* .dark {
+    --color-primary: #3d444d;
+    --color-text: #f3f4f6;
+  } 
+} */
