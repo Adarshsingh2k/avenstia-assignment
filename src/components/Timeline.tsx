@@ -7,31 +7,7 @@ import { Typography } from "../baseline-component/typography/Typography";
 import Badge from "../baseline-component/badges/Badge";
 import Button from "../baseline-component/buttons/Button";
 import { ApprovalIcon } from "../utils/ApprovalIcon";
-type TimelineEvent = {
-  id: string;
-  type:
-    | "comment"
-    | "merged"
-    | "approval"
-    | "title_changed"
-    | "force_push"
-    | "label"
-    | "deployment"
-    | "commit";
-  user: string;
-  avatarUrl?: string;
-  at: string;
-  content?: string;
-  from?: string;
-  to?: string;
-  from_sha?: string;
-  to_sha?: string;
-  label?: string;
-  role?: string;
-  deployed_to?: string;
-  code?: string;
-  table_markdown?: object;
-};
+import { TimelineEvent } from "../utils/types/pr";
 
 export const PRTimeline: React.FC<{ events: TimelineEvent[] }> = ({
   events,
@@ -58,7 +34,7 @@ export const PRTimeline: React.FC<{ events: TimelineEvent[] }> = ({
   }
   return (
     <ol className="relative w-full border-b-5 border-gray-300">
-      <div className="absolute inset-y-0 left-3/24 w-1 bg-gray-300 dark:bg-gray-700" />
+      <div className="absolute inset-y-0 left-[12%] w-1 bg-gray-300 dark:bg-gray-700" />
 
       {events.map((evt) => (
         <li key={evt.id} className="relative mb-8 ">

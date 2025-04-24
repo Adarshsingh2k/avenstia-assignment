@@ -21,7 +21,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
   label,
   children,
   className,
-  responsiveWidth = "md", // default to 'md'
+  responsiveWidth = "md",
 }) => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);

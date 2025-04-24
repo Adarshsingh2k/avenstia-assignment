@@ -2,6 +2,7 @@ import React from "react";
 import { formatDistanceToNow } from "date-fns";
 import { cn } from "../../utils/cn";
 import IconButton from "../buttons/IconButton";
+import { TableMarkdown } from "../../utils/types/pr";
 import TableFromMarkdown from "../table_markdown/TableFromMarkdown";
 
 type CommentItemProps = {
@@ -10,7 +11,7 @@ type CommentItemProps = {
   role?: string;
   createdAt: Date | string;
   content: string;
-  markDownTable?: object;
+  markDownTable?: TableMarkdown;
   className?: string;
 };
 

@@ -10,8 +10,24 @@ const ApprovalIcon = () => (
   </span>
 );
 
-const DescSidebar = ({ pr }) => {
-  const renderReviewer = (item, i) => (
+interface Review {
+  user: string;
+  state: "approved" | string;
+}
+interface PRData {
+  pr: {
+    reviews: Review[];
+    labels: string[];
+    projects: string[];
+    milestone: string[];
+    participants: string[];
+  };
+}
+interface DescSidebarProps {
+  pr: PRData;
+}
+const DescSidebar: React.FC<DescSidebarProps> = ({ pr }) => {
+  const renderReviewer = (item: Review, i: number) => (
     <div key={i} className="flex justify-between items-center">
       <div className="flex items-center gap-2">
         <Avatar src={`https://github.com/${item.user}.png`} />
@@ -21,13 +37,13 @@ const DescSidebar = ({ pr }) => {
     </div>
   );
 
-  const renderBadge = (item, i) => (
+  const renderBadge = (item: string, i: number) => (
     <Badge key={i} variant="success" size="sm">
       {item}
     </Badge>
   );
 
-  const renderParticipant = (item, i) => (
+  const renderParticipant = (item: string, i: number) => (
     <Avatar key={i} src={`https://github.com/${item}.png`} />
   );
 

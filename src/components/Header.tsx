@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Typography } from "../baseline-component/typography/Typography";
 import Badge from "../baseline-component/badges/Badge";
 import DropdownButton from "../baseline-component/dropdown-button/DropdownButton";
 import Tabs from "../baseline-component/tab/Tabs";
+import { PR } from "../utils/types/pr";
+interface HeaderProps {
+  data: {
+    pr: PR;
+  };
+}
 
-const Header = ({ data }) => {
+const Header: React.FC<HeaderProps> = ({ data }) => {
   const [tab, setTab] = useState("Local");
   const tabItems = [
     {

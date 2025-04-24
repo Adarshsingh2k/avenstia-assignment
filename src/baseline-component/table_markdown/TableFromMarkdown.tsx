@@ -1,14 +1,9 @@
 import React from "react";
 import { cn } from "../../utils/cn";
-
-export interface TableMarkdown {
-  th: string[];
-
-  [rowKey: string]: any;
-}
+import { TableMarkdown } from "../../utils/types/pr";
 
 interface TableProps {
-  data: TableMarkdown;
+  data?: TableMarkdown;
   className?: string;
 }
 
@@ -16,7 +11,10 @@ export const TableFromMarkdown: React.FC<TableProps> = ({
   data,
   className,
 }) => {
-  const headers = data.th;
+  if (!data || !Array.isArray(data.th)) {
+    return null;
+  }
+  const headers = data?.th;
 
   const rowKeys = Object.keys(data).filter((k) => k !== "th");
   const rows = rowKeys.map((k) => data[k] as Record<string, string>);
@@ -32,7 +30,7 @@ export const TableFromMarkdown: React.FC<TableProps> = ({
       <table className="min-w-6/12 text-left text-sm border border-gray-200 dark:border-gray-700">
         <thead className="">
           <tr className="border-b border-gray-300 dark:border-gray-700">
-            {headers.map((label) => (
+            {headers?.map((label) => (
               <th
                 key={label}
                 className="px-4 py-2 font-medium text-gray-700 dark:text-gray-300"
@@ -52,7 +50,7 @@ export const TableFromMarkdown: React.FC<TableProps> = ({
                   : "bg-white dark:bg-gray-700"
               }
             >
-              {headers.map((label) => {
+              {headers?.map((label) => {
                 const prop = headerToKey(label);
                 return (
                   <td

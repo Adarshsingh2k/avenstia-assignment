@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Typography } from "../baseline-component/typography/Typography";
 import Tabs from "../baseline-component/tab/Tabs";
 import { PRTimeline } from "./Timeline";
@@ -7,9 +7,10 @@ import DescSidebar from "./DescSidebar";
 import Card from "../baseline-component/card/Card";
 import Header from "./Header";
 import { ThemeToggle } from "./ThemeToggle";
+import { PR } from "../utils/types/pr";
 
 const Main = () => {
-  const [prData, setPrData] = useState();
+  const [prData, setPrData] = useState<{ pr: PR } | null>(null);
   const [tab, setTab] = useState("conversation");
 
   const tabItems = [
