@@ -167,7 +167,7 @@ export const PRTimeline: React.FC<{ events: TimelineEvent[] }> = ({
                     </div>
                   )}
                   {evt.type === "deployment" && (
-                    <div className="flex flex-row justify-between text-center w-full">
+                    <div className="flex flex-row justify-between w-full">
                       <div>
                         <Typography variant="p" className="">
                           {" "}
@@ -183,7 +183,9 @@ export const PRTimeline: React.FC<{ events: TimelineEvent[] }> = ({
                           {evt.at}
                         </Typography>
                       </div>
-                      <Button variant="secondary">View Deployment</Button>
+                      <Button variant="secondary" className="w-[150px] text-sm">
+                        View Deployment
+                      </Button>
                     </div>
                   )}
                 </div>
